@@ -18,11 +18,16 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('NeedFood'),
+          title: Text(
+            'NeedFood',
+            style: TextStyle(color: Colors.white),
+          ),
+          backgroundColor: Colors.orange,
+          iconTheme: IconThemeData(color: Colors.white),
         ),
-        body: Column(children: [
+        body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Padding(
-            padding: const EdgeInsets.only(top: 300.0, bottom: 40),
+            padding: const EdgeInsets.only( bottom: 40),
             child: Text(
               'Sing In',
               style: TextStyle(
@@ -88,7 +93,7 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.lightBlueAccent),
+                      MaterialStateProperty.all<Color>(Colors.orange),
                 ),
                 child: Text(
                   'Login',

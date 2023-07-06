@@ -27,9 +27,14 @@ class _FavoritosState extends State<Favoritos> {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('NeedFood'),
-      ),
+        appBar: AppBar(
+          title: Text(
+            'NeedFood',
+            style: TextStyle(color: Colors.white),
+          ),
+          backgroundColor: Colors.orange,
+          iconTheme: IconThemeData(color: Colors.white),
+        ),
         body: ListView.builder(
             itemCount: itens.length,
             itemBuilder: (BuildContext context, int index) {

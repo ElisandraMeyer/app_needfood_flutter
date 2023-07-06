@@ -15,7 +15,12 @@ class _CategoriaPizzaState extends State<CategoriaPizza> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('NeedFood'),
+          title: Text(
+            'NeedFood',
+            style: TextStyle(color: Colors.white),
+          ),
+          backgroundColor: Colors.orange,
+          iconTheme: IconThemeData(color: Colors.white),
         ),
         body: ListView(
           children: [

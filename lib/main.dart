@@ -9,6 +9,9 @@ void main(){
       MaterialApp(
         home: Login(),
         debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+        primarySwatch: Colors.orange,
+        ),
       )
     );
 }

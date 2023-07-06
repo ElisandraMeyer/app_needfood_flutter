@@ -24,7 +24,12 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('NeedFood'),
+        title: Text(
+          'NeedFood',
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.orange,
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16.0),
@@ -76,11 +81,14 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) =>
-                            Carrinho(nome: widget.nome, imagem: widget.imagem, valor: widget.valor,),
+                        builder: (context) => Carrinho(
+                          nome: widget.nome,
+                          imagem: widget.imagem,
+                          valor: widget.valor,
+                        ),
                       ));
                 },
-                child: Text('Adicionar ao Carrinho'),
+                child: Text('Adicionar ao Carrinho', style: TextStyle(color: Colors.white),),
               ),
               SizedBox(height: 8.0),
               ElevatedButton(
@@ -92,7 +100,7 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
                             Favoritos(nome: widget.nome, imagem: widget.imagem),
                       ));
                 },
-                child: Text('Adicionar aos Favoritos'),
+                child: Text('Adicionar aos Favoritos', style: TextStyle(color: Colors.white)),
               ),
             ],
           ),

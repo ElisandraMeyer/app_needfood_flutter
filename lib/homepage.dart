@@ -9,8 +9,6 @@ import 'package:flutter_application_1/detalhesProduto.dart';
 import 'package:flutter_application_1/favoritos.dart';
 
 class HomePage extends StatefulWidget {
-  // String email;
-
   HomePage({super.key});
 
   @override
@@ -70,20 +68,27 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('NeedFood'),
+        title: Text(
+          'NeedFood',
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.orange,
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: SingleChildScrollView(
         child: Container(
           child: Column(
             children: [
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Image.asset(
-                  'assets/images/NeedFOOD.png',
-                  width: 600,
-                  height: 600,
-                  fit: BoxFit.contain,
+              FractionallySizedBox(
+                widthFactor: 0.8,
+                child: AspectRatio(
+                  aspectRatio: 1,
+                  child: Image.asset(
+                    'assets/images/NeedFOOD.png',
+                    fit: BoxFit.contain,
+                  ),
                 ),
-              ]),
+              ),
               Row(
                 children: [
                   Padding(
@@ -105,10 +110,11 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
                   InkWell(
                     onTap: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => CategoriaBurger(),
-                          ));
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CategoriaBurger(),
+                        ),
+                      );
                     },
                     child: Card(
                       shape: RoundedRectangleBorder(
@@ -142,10 +148,11 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
                   InkWell(
                     onTap: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => CategoriaDrink(),
-                          ));
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CategoriaDrink(),
+                        ),
+                      );
                     },
                     child: Card(
                       shape: RoundedRectangleBorder(
@@ -179,10 +186,11 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
                   InkWell(
                     onTap: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => CategoriaPizza(),
-                          ));
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CategoriaPizza(),
+                        ),
+                      );
                     },
                     child: Card(
                       shape: RoundedRectangleBorder(
@@ -240,12 +248,14 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => DetalhesProduto(
-                                nome: 'Beef Burger',
-                                imagem: 'assets/images/beef_burger.png',
-                                valor: '40,00',
-                                descricao:
-                                    'Nosso beef burger é uma explosão de sabor e suculência. Preparado com carne bovina de alta qualidade, grelhada na perfeição e temperada com especiarias selecionadas, cada mordida é uma experiência deliciosa. Com um pão macio e levemente tostado, acompanhado de ingredientes frescos e um molho especial, nosso beef burger é uma combinação irresistível de texturas e sabores. Desfrute de um hambúrguer suculento e satisfatório que certamente vai satisfazer seu apetite.')),
+                          builder: (context) => DetalhesProduto(
+                            nome: 'Beef Burger',
+                            imagem: 'assets/images/beef_burger.png',
+                            valor: '40,00',
+                            descricao:
+                                'Nosso beef burger é uma explosão de sabor e suculência. Preparado com carne bovina de alta qualidade, grelhada na perfeição e temperada com especiarias selecionadas, cada mordida é uma experiência deliciosa. Com um pão macio e levemente tostado, acompanhado de ingredientes frescos e um molho especial, nosso beef burger é uma combinação irresistível de texturas esabores. Desfrute de um hambúrguer suculento e satisfatório que certamente vai satisfazer seu apetite.',
+                          ),
+                        ),
                       );
                     },
                     child: Card(
@@ -289,12 +299,14 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => DetalhesProduto(
-                                nome: 'Pizza Fruit',
-                                imagem: 'assets/images/pizza_fruit.png',
-                                valor: '65,00',
-                                descricao:
-                                    'Nossa pizza fruit é uma combinação perfeita entre o sabor salgado e o toque doce das frutas frescas. Com uma massa fina e crocante, coberta com molho de tomate artesanal e uma generosa quantidade de queijo derretido, essa pizza é uma explosão de sabores. As frutas frescas, como abacaxi, kiwi e morango, adicionam um toque refrescante e uma dimensão única ao sabor. Desfrute dessa pizza única e saborosa, que une o melhor dos mundos salgado e doce em cada fatia.')),
+                          builder: (context) => DetalhesProduto(
+                            nome: 'Pizza Fruit',
+                            imagem: 'assets/images/pizza_fruit.png',
+                            valor: '65,00',
+                            descricao:
+                                'Nossa pizza fruit é uma combinação perfeita entre o sabor salgado e o toque doce das frutas frescas. Com uma massa fina e crocante, coberta com molho de tomate artesanal e uma generosa quantidade de queijo derretido, essa pizza é uma explosão de sabores. As frutas frescas, como abacaxi, kiwi e morango, adicionam um toque refrescante e uma dimensão única ao sabor. Desfrute dessa pizza única e saborosa, que une o melhor dos mundos salgado e doce em cada fatia.',
+                          ),
+                        ),
                       );
                     },
                     child: Card(
@@ -338,12 +350,14 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => DetalhesProduto(
-                                nome: 'Sandwich',
-                                imagem: 'assets/images/sandwich.png',
-                                valor: '15,00',
-                                descricao:
-                                    'Nosso sanduíche é uma opção deliciosa e versátil para uma refeição rápida e satisfatória. Preparado com pão fresco e macio, ele é recheado com uma combinação de ingredientes frescos e saborosos. Você pode escolher entre uma variedade de opções, como queijo derretido, alface crocante, tomate suculento e uma seleção de carnes ou vegetais. Cada mordida do nosso sanduíche proporciona uma explosão de sabores e uma textura incrível. Desfrute desse lanche prático e saboroso em qualquer momento do dia.')),
+                          builder: (context) => DetalhesProduto(
+                            nome: 'Sandwich',
+                            imagem: 'assets/images/sandwich.png',
+                            valor: '15,00',
+                            descricao:
+                                'Nosso sanduíche é uma opção deliciosa e versátil para uma refeição rápida e satisfatória. Preparado com pão fresco e macio, ele é recheado com uma combinação de ingredientes saborosos, como queijo derretido, alface fresca, tomate suculento e uma seleção de molhos deliciosos. Cada mordida é uma explosão de sabores e texturas, oferecendo uma experiência de sanduíche única e satisfatória. Desfrute de um sanduíche incrível que vai satisfazer seu apetite em qualquer hora do dia.',
+                          ),
+                        ),
                       );
                     },
                     child: Card(
@@ -391,35 +405,3 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
     );
   }
 }
-
-// class Favoritos extends StatefulWidget {
-//   const Favoritos({super.key});
-
-//   @override
-//   State<Favoritos> createState() => _FavoritosState();
-// }
-
-// class _FavoritosState extends State<Favoritos> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Text('Favoritos'),
-//     );
-//   }
-// }
-
-// class Carrinho extends StatefulWidget {
-//   const Carrinho({super.key});
-
-//   @override
-//   State<Carrinho> createState() => _CarrinhoState();
-// }
-
-// class _CarrinhoState extends State<Carrinho> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Text('Carrinho'),
-//     );
-//   }
-// }
